@@ -8,8 +8,8 @@ public class Test_SelDroid_App extends BaseTestClass {
 
     @Test
     public void testChrome() {
-        //Search for contact
-     //   searchPage.search("Sara");
+
+        // Run chrome browser
         chromePage.runChrome();
         chromePage.enterName("Mohammad");
         chromePage.submit();
