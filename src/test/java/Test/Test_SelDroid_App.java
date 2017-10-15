@@ -16,13 +16,14 @@ public class Test_SelDroid_App extends BaseTestClass {
 
         //Verify Result
         Assert.assertEquals("Mohammad", chromePage.getName());
-        Assert.assertEquals("Volvo", chromePage.getCar());
+        Assert.assertEquals("volvo", chromePage.getCar());
     }
 
     @Test
     public void testPopUp() {
         popupPage.clickPopup();
-//        Assert.assertEquals("Dismiss", popupPage.g);
+        driver().switchTo().alert();
+        Assert.assertEquals("Dismiss", popupPage.getPopupText());
     }
 
 }

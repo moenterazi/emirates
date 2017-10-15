@@ -13,7 +13,7 @@ public class PopupPageDisplay implements PopUpPage {
     }
 
 
-    @FindBy(id = "showPopupWindowButton")
+    @FindBy (id = "showPopupWindowButton")
     public MobileElement popUpPage;
 
     public void clickPopup()    {
@@ -21,8 +21,10 @@ public class PopupPageDisplay implements PopUpPage {
     }
 
     //TODO:    Pop up is not being detected by inspector
-/*    @FindBy(id = "popUpId")
+    @FindBy (xpath = "//android.widget.Button[@content-desc='Dismiss']")
+    public MobileElement dismissButton;
+
     public String getPopupText() {
-        popUpPage.getText();
-    }*/
+        return dismissButton.getText();
+    }
 }

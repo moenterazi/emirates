@@ -21,11 +21,14 @@ public class getChromeHomePage implements Chrome {
     @FindBy (xpath = "//android.widget.Button[@content-desc='Send me your name!']")
     public MobileElement submitInfo;
 
-    @FindBy (xpath = "//*[@class='android.view.WebView' and @index='0']/[@class='android.view.View' and @index='1']")
-//    @FindBy (xpath = "//*[contains(.,'Mohammad')]")
+//    @FindBy (xpath = "//*[@class='android.view.WebView' and @index='0']/[@class='android.view.View' and @index='1']")
+//    @FindBy (xpath ="//*[@text='\" + Mohammad + \"']")
+    @FindBy (xpath = "//android.view.View[contains(@Text, '\" + Mohammad + \"')]")
+    //@FindBy (xpath = "//*[@class='android.webkit.WebView'] and [contains(.,'Mohammad')]")
     public MobileElement namePresent;
 
-    @FindBy (xpath = "//*[contains(.,'Volvo')]")
+    @FindBy (xpath = "//android.view.View[contains(@content-desc,'volvo')]")
+    //@FindBy (xpath = "//*[@class='android.webkit.WebView'] and [contains(.,'Volvo')]")
     public MobileElement carPresent;
 
 
